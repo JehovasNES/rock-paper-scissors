@@ -39,9 +39,11 @@ function scoreCount() { //issue that needs to be fixed, doesn't seem to notice t
         return("The score is now " + playerScore + "-" + computerScore);
 }
 
+let playerInput = window.prompt("Select Rock, Paper, or Scissors?")
+
 console.log(scoreCount())
 
-const playerSelect = "Paper"
+let playerSelect = playerInput;
 const computerSelect = computerChoice();
 console.log(computerSelect);
 console.log(playRound(playerSelect, computerSelect));
