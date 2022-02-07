@@ -18,14 +18,25 @@ function playRound(playerSelect, computerSelect) {
         (playerSelect == "ROCK" && computerSelect == "PAPER") ||
         (playerSelect == "PAPER" && computerSelect == "SCISSORS") ||
         (playerSelect == "SCISSORS" && computerSelect == "ROCK")
-    ) return("You Lose!");
+    ) return("You Lose! The score is now " + playerScore + "-" + ++computerScore); 
     else if (
         (playerSelect == "ROCK" && computerSelect == "SCISSORS") ||
         (playerSelect == "PAPER" && computerSelect == "ROCK") ||
         (playerSelect == "SCISSORS" && computerSelect == "PAPER")
-    ) return("You Win!");
+    ) return('You Win! The score is now ' + ++playerScore + '-' + computerScore);
     else return("Please enter a valid choice!");
 }
+
+let playerScore = 0;
+let computerScore = 0;
+
+function score(playerScore, computerScore) {
+    if (playerScore == 5)
+        return("You Won the Game!")
+    else (computerScore == 5)
+        return("You lost the Game!");
+}
+
 
 const playerSelect = "Paper"
 const computerSelect = computerChoice();
