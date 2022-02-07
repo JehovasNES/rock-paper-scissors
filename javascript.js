@@ -1,8 +1,8 @@
 
 
 function computerChoice(){
-    let choice = ["ROCK", "PAPER", "SCISSORS"]
-    choiceMade = choice[Math.floor(Math.random() *  choice.length)];
+    let choice = ["ROCK", "PAPER", "SCISSORS"] //array the three choices
+    choiceMade = choice[Math.floor(Math.random() *  choice.length)]; //generate a random number from 0-2 to select an option
     return choiceMade;
 }
 
@@ -39,11 +39,11 @@ function scoreCount() { //issue that needs to be fixed, doesn't seem to notice t
         return("The score is now " + playerScore + "-" + computerScore);
 }
 
-let playerInput = window.prompt("Select Rock, Paper, or Scissors?")
+let playerInput = window.prompt("Select Rock, Paper, or Scissors?") //playerInput here
 
 console.log(scoreCount())
 
-let playerSelect = playerInput;
-const computerSelect = computerChoice();
+let playerSelect = playerInput; //convert to playerSelect for playRound function
+let computerSelect = computerChoice(); //convert to computerSelect for computerChoice function
 console.log(computerSelect);
 console.log(playRound(playerSelect, computerSelect));
