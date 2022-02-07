@@ -1,15 +1,15 @@
 
 
 function computerChoice(){
-    let choice = ["rock", "paper", "scissors"]
+    let choice = ["ROCK", "PAPER", "SCISSORS"]
     choiceMade = choice[Math.floor(Math.random() *  choice.length)];
     return choiceMade;
 }
 
 
 
-function playRound(playerSelect, computerSelect) {
-    playerSelect = playerSelect.toUpperCase();
+function playRound(playerSelect, computerSelect) { //Does not seem to reroll computerChoice so it can be run again.
+    playerSelect = playerSelect.toUpperCase(); //Dev Console will not run the program if you do not define playerSelect rerun. Seems like normal behavior
     computerSelect = computerSelect.toUpperCase();
     if (playerSelect == computerSelect) {
         return("Tie!");
@@ -30,13 +30,16 @@ function playRound(playerSelect, computerSelect) {
 let playerScore = 0;
 let computerScore = 0;
 
-function score(playerScore, computerScore) {
-    if (playerScore == 5)
+function scoreCount() { //issue that needs to be fixed, doesn't seem to notice the pre-increment so it cannot be used as the primary score method yet
+    if (playerScore >= 5)
         return("You Won the Game!")
-    else (computerScore == 5)
-        return("You lost the Game!");
+    else if (computerScore >= 5)
+        return("You lost the Game!")
+    else
+        return("The score is now " + playerScore + "-" + computerScore);
 }
 
+console.log(scoreCount())
 
 const playerSelect = "Paper"
 const computerSelect = computerChoice();
