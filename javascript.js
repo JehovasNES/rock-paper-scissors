@@ -34,7 +34,7 @@ function scoreCount() { //issue that needs to be fixed, doesn't seem to notice t
     if (playerScore >= 5)
         return("You Won the Game!")
     else if (computerScore >= 5)
-        return("You lost the Game!")
+        return("You Lost the Game!")
     else
         return("The score is now " + playerScore + "-" + computerScore);
 }
