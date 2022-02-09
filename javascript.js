@@ -12,6 +12,7 @@ function playRound(playerSelect, computerSelect) { //Does not seem to reroll com
     do {
         computerSelect = computerChoice();
         playerInput = window.prompt("Select Rock, Paper, or Scissors?");
+        console.log(scoreCount());
         if (playerSelect == computerSelect) {
             return("Tie!");
         }
@@ -26,7 +27,7 @@ function playRound(playerSelect, computerSelect) { //Does not seem to reroll com
             (playerSelect == "SCISSORS" && computerSelect == "PAPER")
         ) return('You Win! The score is now ' + ++playerScore + '-' + computerScore);
         else return("Please enter a valid choice!");
-    } while (playerScore < 5 || computerScore < 5);
+    } while (playerScore < 5 && computerScore < 5);
 }
 
 let playerScore = 0;
@@ -44,7 +45,7 @@ function scoreCount() { //issue that needs to be fixed, doesn't seem to notice t
 
 let playerInput = window.prompt("Select Rock, Paper, or Scissors?") //playerInput here
 
-console.log(scoreCount())
+
 
 let playerSelect = playerInput; //convert to playerSelect for playRound function
 let computerSelect = computerChoice(); //convert to computerSelect for computerChoice function
