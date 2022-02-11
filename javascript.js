@@ -28,10 +28,10 @@ function playRound(playerSelect, computerSelect) {
         ) alert('You Win! The score is now ' + ++playerScore + '-' + computerScore);
         else alert("Please enter a valid choice!");
     } while (playerScore < 5 && computerScore < 5);
-        if(playerScore = 5)
-            alert("YOU WON!");
-        else(computerScore = 5)
-            alert("YOU LOST");
+        if (playerScore == 5)
+            return alert("YOU WON!");
+        else
+            return alert("YOU LOST");
     
 }
 
