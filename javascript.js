@@ -35,15 +35,6 @@ function playRound(playerSelect, computerSelect) {
     
 }
 
-/*
-function gamewin() {
-    if (playerScore = 5)
-        alert("YOU WIN!")
-    else(computerScore = 5)
-        alert("YOU LOSE");
-}
-*/
-
 let playerScore = 0;
 let computerScore = 0;
 let playerInput = "";
