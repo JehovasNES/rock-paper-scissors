@@ -1,12 +1,8 @@
-
-
 function computerChoice(){
     let choice = ["ROCK", "PAPER", "SCISSORS"] //array the three choices
     choiceMade = choice[Math.floor(Math.random() *  choice.length)]; //generate a random number from 0-2 to select an option
     return choiceMade;
 }
-
-
 
 function playRound(playerSelect, computerSelect) {
     playerSelect = playerSelect.toUpperCase();
@@ -32,11 +28,25 @@ function playRound(playerSelect, computerSelect) {
         ) alert('You Win! The score is now ' + ++playerScore + '-' + computerScore);
         else alert("Please enter a valid choice!");
     } while (playerScore < 5 && computerScore < 5);
+        if(playerScore = 5)
+            alert("YOU WON!");
+        else(computerScore = 5)
+            alert("YOU LOST");
+    
 }
+
+/*
+function gamewin() {
+    if (playerScore = 5)
+        alert("YOU WIN!")
+    else(computerScore = 5)
+        alert("YOU LOSE");
+}
+*/
 
 let playerScore = 0;
 let computerScore = 0;
-let playerInput = ""; //window.prompt("Select Rock, Paper, or Scissors?") //playerInput here
+let playerInput = "";
 
 let playerSelect = playerInput; //convert to playerSelect for playRound function
 let computerSelect = computerChoice(); //convert to computerSelect for computerChoice function
