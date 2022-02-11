@@ -7,13 +7,16 @@ function computerChoice(){
 }
 
 
+
 function playRound(playerSelect, computerSelect) {
     playerSelect = playerSelect.toUpperCase();
     do {
         computerSelect = computerChoice(); //assigns a new choice
         playerInput = window.prompt("Select Rock, Paper, or Scissors?"); //prompts for input
-        console.log(playerInput);
-        console.log(computerSelect);
+        playerSelect = playerInput.toUpperCase();
+        
+        console.log(playerSelect); //test for playerSelect
+        console.log(computerSelect); //computerSelect
         if (playerSelect == computerSelect) {
             alert("Tie!");
         }
@@ -33,7 +36,7 @@ function playRound(playerSelect, computerSelect) {
 
 let playerScore = 0;
 let computerScore = 0;
-let playerInput = window.prompt("Select Rock, Paper, or Scissors?") //playerInput here
+let playerInput = ""; //window.prompt("Select Rock, Paper, or Scissors?") //playerInput here
 
 let playerSelect = playerInput; //convert to playerSelect for playRound function
 let computerSelect = computerChoice(); //convert to computerSelect for computerChoice function
