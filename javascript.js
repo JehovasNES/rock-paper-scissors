@@ -12,6 +12,8 @@ function playRound(playerSelect, computerSelect) {
     do {
         computerSelect = computerChoice(); //assigns a new choice
         playerInput = window.prompt("Select Rock, Paper, or Scissors?"); //prompts for input
+        console.log(playerInput);
+        console.log(computerSelect);
         if (playerSelect == computerSelect) {
             alert("Tie!");
         }
@@ -35,5 +37,4 @@ let playerInput = window.prompt("Select Rock, Paper, or Scissors?") //playerInpu
 
 let playerSelect = playerInput; //convert to playerSelect for playRound function
 let computerSelect = computerChoice(); //convert to computerSelect for computerChoice function
-console.log(computerSelect);
 console.log(playRound(playerSelect, computerSelect));
