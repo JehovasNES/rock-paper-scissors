@@ -13,19 +13,19 @@ function playRound(playerSelect, computerSelect) {
         computerSelect = computerChoice(); //assigns a new choice
         playerInput = window.prompt("Select Rock, Paper, or Scissors?"); //prompts for input
         if (playerSelect == computerSelect) {
-            console.log("Tie!");
+            alert("Tie!");
         }
         else if (
             (playerSelect == "ROCK" && computerSelect == "PAPER") ||
             (playerSelect == "PAPER" && computerSelect == "SCISSORS") ||
             (playerSelect == "SCISSORS" && computerSelect == "ROCK")
-        ) console.log("You Lose! The score is now " + playerScore + "-" + ++computerScore); 
+        ) alert("You Lose! The score is now " + playerScore + "-" + ++computerScore); 
         else if (
             (playerSelect == "ROCK" && computerSelect == "SCISSORS") ||
             (playerSelect == "PAPER" && computerSelect == "ROCK") ||
             (playerSelect == "SCISSORS" && computerSelect == "PAPER")
-        ) console.log('You Win! The score is now ' + ++playerScore + '-' + computerScore);
-        else return("Please enter a valid choice!");
+        ) alert('You Win! The score is now ' + ++playerScore + '-' + computerScore);
+        else alert("Please enter a valid choice!");
     } while (playerScore < 5 && computerScore < 5);
 }
 
