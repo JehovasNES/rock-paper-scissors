@@ -7,45 +7,31 @@ function computerChoice(){
 }
 
 
-function playRound(playerSelect, computerSelect) { //Does not seem to reroll computerChoice so it can be run again.
-    playerSelect = playerSelect.toUpperCase(); //Dev Console will not run the program if you do not define playerSelect rerun. Seems like normal behavior
+function playRound(playerSelect, computerSelect) {
+    playerSelect = playerSelect.toUpperCase();
     do {
-        computerSelect = computerChoice();
-        playerInput = window.prompt("Select Rock, Paper, or Scissors?");
-        console.log(scoreCount());
+        computerSelect = computerChoice(); //assigns a new choice
+        playerInput = window.prompt("Select Rock, Paper, or Scissors?"); //prompts for input
         if (playerSelect == computerSelect) {
-            return("Tie!");
+            console.log("Tie!");
         }
         else if (
             (playerSelect == "ROCK" && computerSelect == "PAPER") ||
             (playerSelect == "PAPER" && computerSelect == "SCISSORS") ||
             (playerSelect == "SCISSORS" && computerSelect == "ROCK")
-        ) return("You Lose! The score is now " + playerScore + "-" + ++computerScore); 
+        ) console.log("You Lose! The score is now " + playerScore + "-" + ++computerScore); 
         else if (
             (playerSelect == "ROCK" && computerSelect == "SCISSORS") ||
             (playerSelect == "PAPER" && computerSelect == "ROCK") ||
             (playerSelect == "SCISSORS" && computerSelect == "PAPER")
-        ) return('You Win! The score is now ' + ++playerScore + '-' + computerScore);
+        ) console.log('You Win! The score is now ' + ++playerScore + '-' + computerScore);
         else return("Please enter a valid choice!");
     } while (playerScore < 5 && computerScore < 5);
 }
 
 let playerScore = 0;
 let computerScore = 0;
-let sCount = scoreCount();
-
-function scoreCount() { //issue that needs to be fixed, doesn't seem to notice the pre-increment so it cannot be used as the primary score method yet
-    if (playerScore >= 5)
-        return("You Won the Game!")
-    else if (computerScore >= 5)
-        return("You Lost the Game!")
-    else
-        return("The score is now " + playerScore + "-" + computerScore);
-}
-
 let playerInput = window.prompt("Select Rock, Paper, or Scissors?") //playerInput here
-
-
 
 let playerSelect = playerInput; //convert to playerSelect for playRound function
 let computerSelect = computerChoice(); //convert to computerSelect for computerChoice function
