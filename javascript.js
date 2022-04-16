@@ -4,7 +4,7 @@ function computerInput(){
     return selection;
 }
 
-function playGame(playerSelect, compSelect) {
+//function playGame(playerSelect, compSelect) {
     playerScore = 0;
     compScore = 0;
     do {
