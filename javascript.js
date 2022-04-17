@@ -4,8 +4,8 @@ function computerInput(){
     return selection;
 }
 
-//function playGame(playerSelect, compSelect) {
-    playerScore = 0;
+function playGame(playerSelect, compSelect) {
+    playerScore = 0; //convert to global + seperate score keeping.
     compScore = 0;
     do {
         compSelect = computerInput();
