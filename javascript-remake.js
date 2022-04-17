@@ -9,10 +9,20 @@ function cInput(){
 pInput = "";
 
 const rock = document.querySelector('#rock');
-rock.onclick = () => pInput = "ROCK", playRound();
-
+rock.onclick = () => {
+    pInput = "ROCK";
+    document.getElementById('pChoice').innerText = 'ROCK';
+}
 const paper = document.querySelector('#paper');
-paper.onclick = () => pInput = "PAPER", playRound();
-
+paper.onclick = () => {
+    pInput = "PAPER";
+    document.getElementById('pChoice').innerText = 'PAPER';
+}
 const scissors = document.querySelector('#scissors');
-scissors.onclick = () => pInput = "SCISSORS", playRound();
+scissors.onclick = () => {
+    pInput = "SCISSORS";
+    document.getElementById('pChoice').innerText = 'SCISSORS';
+}
+
+//moving playRound() into a button press
+
