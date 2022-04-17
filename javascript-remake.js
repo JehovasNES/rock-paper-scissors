@@ -51,13 +51,18 @@ function playRound(pSelect, cSelect) {
         (pSelect == "ROCK" && cSelect == "PAPER") ||
         (pSelect == "PAPER" && cSelect == "SCISSORS") ||
         (pSelect == "SCISSORS" && cSelect == "ROCK")
-    ) return ++cScore;
-    else if (
+    ){
+     ++cScore;
+    const currentcScore = document.querySelector('#cScore').innerHTML = `${cScore}`;
+    return
+    }
+    else (
         (pSelect == "ROCK" && cSelect == "SCISSORS") ||
         (pSelect == "PAPER" && cSelect == "ROCK") ||
         (pSelect == "SCISSORS" && cSelect == "PAPER")
-    ) return ++pScore;
-    else return;
+    );  pScore++;
+        const currentpScore = document.querySelector('#pScore').innerHTML = `${pScore}`;
+    return;
 } 
 
 function scoreKeep(pScore, cScore) {
