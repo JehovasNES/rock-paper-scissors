@@ -66,9 +66,13 @@ function playRound(pSelect, cSelect) {
 } 
 
 function scoreKeep(pScore, cScore) {
-    if (pScore == 5)
+    if (pScore == 5) {
         alert("YOU WON!");
-    else if (cScore == 5)
+        const button = document.querySelector('#startBtn').disabled = true;
+    }
+    else if (cScore == 5) {
         alert("YOU LOST");
+        const button = document.querySelector('#startBtn').disabled = true;
+    }
     else return;
 }
