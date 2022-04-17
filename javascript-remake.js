@@ -7,6 +7,8 @@ function cInput(){
 }
 
 pInput = "";
+pScore = 0;
+cScore = 0;
 
 const rock = document.querySelector('#rock');
 rock.onclick = () => {
@@ -26,3 +28,42 @@ scissors.onclick = () => {
 
 //moving playRound() into a button press
 
+const startButton = document.querySelector('#startBtn');
+startButton.onclick = () => {
+    //console.log(pInput);
+    pSelect = pInput;
+    cSelect = cInput();
+    playRound();
+    scoreKeep(pScore, cScore);
+}
+
+function playRound(pSelect, cSelect) {
+    cSelect = cInput();
+    pSelect = pInput;
+   
+    console.log(pSelect);
+    console.log(cSelect);
+    
+    if (pSelect == cSelect) {
+        return;
+    }
+    else if (
+        (pSelect == "ROCK" && cSelect == "PAPER") ||
+        (pSelect == "PAPER" && cSelect == "SCISSORS") ||
+        (pSelect == "SCISSORS" && cSelect == "ROCK")
+    ) return ++cScore;
+    else if (
+        (pSelect == "ROCK" && cSelect == "SCISSORS") ||
+        (pSelect == "PAPER" && cSelect == "ROCK") ||
+        (pSelect == "SCISSORS" && cSelect == "PAPER")
+    ) return ++pScore;
+    else return;
+} 
+
+function scoreKeep(pScore, cScore) {
+    if (pScore == 5)
+        alert("YOU WON!");
+    else if (cScore == 5)
+        alert("YOU LOST");
+    else return;
+}
